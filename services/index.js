@@ -181,10 +181,10 @@ export const getCategoryPost = async (slug) => {
   return result.postsConnection.edges;
 };
 
-export const getFeaturedPosts = async () => {
+export const getFeaturedposts = async () => {
   const query = gql`
     query GetCategoryPost() {
-      posts(where: {featuredPost: true}) {
+      posts(where: {featuredpost: true}) {
         author {
           name
           photo {

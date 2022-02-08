@@ -3,7 +3,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 import { FeaturedPostCard } from '../components';
-import { getFeaturedPosts } from '../services';
+import { getFeaturedposts } from '../services';
 
 const responsive = {
   superLargeDesktop: {
@@ -29,7 +29,7 @@ const FeaturedPosts = () => {
   const [dataLoaded, setDataLoaded] = useState(false);
 
   useEffect(() => {
-    getFeaturedPosts().then((result) => {
+    getFeaturedposts().then((result) => {
       setFeaturedPosts(result);
       setDataLoaded(true);
     });
